@@ -1,0 +1,6 @@
+{
+  "name": "ยะลา ทุเรียนฮับ (Yala Durian Hub)",
+  "description": "ศูนย์กลางฐานข้อมูลสวนทุเรียน แผงรับซื้อ (ล้ง) ราคาตลาดประจำวัน และระบบจัดการหลังบ้านมาตรฐานสิ่งบ่งชี้ทางภูมิศาสตร์ (GI) ทุเรียนสะเด็ดน้ำ จังหวัดยะลา",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

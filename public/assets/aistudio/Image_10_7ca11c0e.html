@@ -1,0 +1,916 @@
+<!DOCTYPE html><html lang="th"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><title>ยะลา ทุเรียนฮับ - ระบบจัดการหลังบ้าน</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary":"#ffffff","outline-variant":"#c0c9c3","tertiary-container":"#004e48","on-error-container":"#93000a","inverse-primary":"#9ed1bd","surface-dim":"#cfdaf2","primary-fixed-dim":"#9ed1bd","primary-fixed":"#baeed9","on-tertiary-fixed":"#00201d","surface-container-high":"#dee8ff","surface":"#f9f9ff","on-primary-fixed-variant":"#1d4f40","error-container":"#ffdad6","surface-container-low":"#f0f3ff","error":"#ba1a1a","secondary-fixed-dim":"#fabc4d","on-secondary-fixed":"#281900","tertiary-fixed":"#9cf2e8","on-secondary":"#ffffff","surface-container-highest":"#d8e3fb","primary-container":"#1b4d3e","surface-tint":"#376757","outline":"#707974","secondary-fixed":"#ffdead","on-primary-fixed":"#002117","on-tertiary":"#ffffff","secondary":"#7e5700","on-tertiary-fixed-variant":"#00504a","on-error":"#ffffff","surface-container":"#e7eeff","on-surface-variant":"#404945","primary":"#003629","surface-variant":"#d8e3fb","inverse-on-surface":"#ecf1ff","on-background":"#111c2d","surface-container-lowest":"#ffffff","on-surface":"#111c2d","inverse-surface":"#263143","on-tertiary-container":"#6bc1b7","secondary-container":"#fdbe50","background":"#f9f9ff","on-primary-container":"#8abda9","tertiary-fixed-dim":"#80d5cb","on-secondary-container":"#714d00","surface-bright":"#f9f9ff","tertiary":"#003531","on-secondary-fixed-variant":"#604100"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2.5rem","space-md":"1rem",gutter:"1.5rem",margin:"2rem","gutter-mobile":"1rem","margin-mobile":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem"},fontFamily:{"headline-lg-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"]},fontSize:{"headline-lg-mobile":["24px",{lineHeight:"32px",fontWeight:"600"}],"headline-xl":["40px",{lineHeight:"48px",fontWeight:"700"}],"headline-md":["22px",{lineHeight:"30px",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",fontWeight:"700"}],"headline-sm":["18px",{lineHeight:"26px",fontWeight:"600"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"600"}],"headline-xl-mobile":["30px",{lineHeight:"38px",fontWeight:"700"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[2px_0_12px_rgba(27,77,62,0.05)]"><div class="h-20 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Yala Durian Hub Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVqOaq_c50ZtL7tiydP5SuLtMZ2mPgtAdmQsqjsavnNku5qv8LLWOE_CXJOITvofZD8l8IELER3UwaHC4gnsml-rWO6nWTa3DOge3CMYYJddXNgBpvL-1zf2HC5yyhdbc2uI5s_SO9FH87ORbr7WZeD682vDLGsqgwlh8PLqAntK53B_grxZyoGS_OZtcP5DIqFIY0wEURnFiAe7n6tyk_Moq38hQl-XkEPlg27KuyEWcxjlVuZcvu"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none">Admin Portal</span><span class="font-label-sm text-label-sm text-on-surface-variant">จ.ยะลา</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm bg-surface-container-low rounded-xl flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIzkELtxfg4xDn9sdOrnpMZFk7O69yGRkWBpMleEv0WGKCtbCCb0Sa0RtHGgA0gQrfuGuAdKYZAfXLaXwfbsv-TB49HwuYbtLdG_ISw0cUhkenaqUmQx7-k537O8uL-IG1PWIp-ONJp7x_93cr_KSjvSOmWKkjZv77RvRkKN8yEuED0ksqxEV1UxgYOgegO0LmHoz2dk-LoCYRchZw3Nk5k_u1_8DQxFdHVO8OLfAC4QLqxWCILGahX0g8YAutmmfhGw"><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface truncate">ผู้ดูแลระบบ</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">yru136868@gmail.com</span></div></div></div><nav class="flex-1 px-space-md py-space-xs flex flex-col gap-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">จัดการข้อมูลสวนและผลผลิต</span><a aria-current="page" class="flex items-center gap-space-sm px-space-md py- space-sm transition-all bg-primary-container text-on-primary font-label-lg rounded-xl" data-path="admin-portal" href="#"><span class="material-symbols-outlined text-lg">dashboard</span><span class="">ภาพรวมแดชบอร์ด</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="manage-orchards" href="#"><span class="material-symbols-outlined text-lg">nature_people</span><span class="">จัดการข้อมูลสวนทุเรียน</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="manage-stalls" href="#"><span class="material-symbols-outlined text-lg">storefront</span><span class="">จัดการแผงรับซื้อ (ล้ง)</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="daily-market-prices" href="#"><span class="material-symbols-outlined text-lg">payments</span><span class="">อัปเดตราคากลางประจำวัน</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="gi-certifications" href="#"><span class="material-symbols-outlined text-lg">verified_user</span><span class="">รับรองมาตรฐาน GI สะเด็ดน้ำ</span></a><div class="my-space-sm bg-surface-container h-[1px]"></div><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">มุมมองผู้ใช้งาน</span><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="map-directory" href="#"><span class="material-symbols-outlined text-lg">public</span><span class="">กลับสู่หน้าแผนที่หลัก</span></a></nav><div class="p-space-md"><a class="flex items-center justify-center gap-space-xs w-full py-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-error-container hover:text-on-error-container transition-colors font-label-md text-label-md" data-path="admin-login" href="#"><span class="material-symbols-outlined text-base">logout</span><span class="">ออกจากระบบ</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(27,77,62,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-sm"><span class="font-label-lg text-label-lg text-primary bg-primary-fixed px-space-sm py-1 rounded-full">เขตตรวจราชการที่ 8 จ.ยะลา</span><span class="font-label-sm text-label-sm text-on-surface-variant">ฤดูกาลผลผลิต: ทุเรียนสะเด็ดน้ำยะลา 2568</span></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5 focus-within:bg-surface-container-lowest transition-colors"><span class="material-symbols-outlined text-outline text-base mr-1.5">search</span><input class="bg-transparent text-on-surface font-body-sm text-body-sm outline-none w-48 placeholder:text-outline" placeholder="ค้นหาทะเบียนสวน, ผู้รับซื้อ..." type="text"></div><a class="flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm" href="tel:073212870"><span class="material-symbols-outlined text-base text-secondary">call</span><span class="">073-212870</span></a><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8BT82zxn4r8E9_Y3nBHz3lfQqrnq6g7Bo6KA5OjOr9H4DDCfBolZAIpxcUDzXK4hu8NzDw4KrCsQK3ddvHWUbH34-uFiHCIj87GyhctkY0f_tAwS9HwNoUUGGGp0iE_5eECKzdaHjtJFeBe-Xg8NF1u3LaTdkTHW9nn6mTKct9oB_i3NEp7oYEl98PAoOnNCKKLWtir-BJCNicqyuShzfLoEKhuSAQLefPPi812YrqfxqBL5qsA6T3muw5ay-u7WFdA"><span class="font-label-sm text-label-sm text-on-surface font-semibold">เจ้าหน้าที่เกษตร</span></div></div></header><main class="relative pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="p-gutter flex flex-col gap-space-lg">
+<!-- Top Admin Overview & Session State -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+            ออนไลน์ความปลอดภัยสูง SSL/TLS
+          </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">พิกัดศูนย์ควบคุม: ศาลากลางจังหวัดยะลา</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary">ระบบจัดการพิกัดสวนและแผงทุเรียน จ.ยะลา</h1>
+<div class="flex flex-wrap items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">shield_person</span>
+<span class="">ยินดีต้อนรับ: <strong class="text-on-surface font-semibold">yru136868@gmail.com</strong> (สิทธิ์ผู้ดูแลระบบสูงสุด Super Admin / เจ้าหน้าที่ ID: 136868000)</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="text-secondary font-label-sm text-label-sm font-semibold">ยืนยัน 2FA เรียบร้อย</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md h-11 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm transition-all" id="btnOpenModal">
+<span class="material-symbols-outlined text-lg">add_location_alt</span>
+<span class="">+ เพิ่มพิกัดสวน/แผงใหม่</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md h-11 rounded-lg bg-secondary hover:bg-secondary-container hover:text-on-secondary-container text-on-secondary font-label-lg text-label-lg shadow-sm transition-all">
+<span class="material-symbols-outlined text-lg">price_change</span>
+<span class="">อัปเดตราคาตลาดวันนี้</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md h-11 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-lg text-label-lg transition-all">
+<span class="material-symbols-outlined text-lg">download</span>
+<span class="">ส่งออกข้อมูล CSV/Excel</span>
+</button>
+</div>
+</div>
+<!-- Summary Metric KPI Cards (4 Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">แปลงเพาะปลูกในระบบ</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">สวนทุเรียนทั้งหมด</h3>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">park</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">48</span>
+<span class="font-body-md text-body-md text-on-surface-variant">สวน</span>
+<span class="ml-auto font-label-sm text-label-sm text-primary bg-primary-fixed/60 px-2 py-0.5 rounded-full">+3 สวนใหม่เดือนนี้</span>
+</div>
+<div class="mt-space-xs pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">สะเด็ดน้ำ GI: <strong class="text-primary font-bold">18</strong> แห่ง</span>
+<span class="">สวนทั่วไป: <strong class="text-on-surface">30</strong> แห่ง</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">เครือข่ายจุดรับซื้อ</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">แผงรับซื้อ/ล้งทุเรียน</h3>
+</div>
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-xl">storefront</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-secondary font-bold">34</span>
+<span class="font-body-md text-body-md text-on-surface-variant">แห่ง</span>
+<span class="ml-auto font-label-sm text-label-sm text-on-tertiary-fixed-variant bg-tertiary-fixed px-2 py-0.5 rounded-full">เปิดรับซื้อปกติ 31</span>
+</div>
+<div class="mt-space-xs pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">พักรับซื้อชั่วคราว: <strong class="text-secondary font-bold">3</strong> แห่ง</span>
+<span class="text-primary">อัตราครอบคลุม 8 อำเภอ</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">ราคากลางพาณิชย์ จ.ยะลา</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">ราคาเฉลี่ยหมอนทองวันนี้</h3>
+</div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-xl">trending_up</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-tertiary font-bold">152.50</span>
+<span class="font-body-md text-body-md text-on-surface-variant">บ./กก.</span>
+<span class="ml-auto font-label-sm text-label-sm text-primary font-semibold flex items-center">
+<span class="material-symbols-outlined text-sm">arrow_drop_up</span> +5.00 บ.
+          </span>
+</div>
+<div class="mt-space-xs pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">เทียบสัปดาห์ก่อน (+3.38%)</span>
+<span class="text-on-surface font-semibold">เกรด AB พรีเมียม</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-fixed-dim"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">การประเมินคุณภาพ</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">สถานะการตรวจรับรอง GAP/GI</h3>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">verified</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">94.2%</span>
+<span class="font-body-md text-body-md text-on-surface-variant">ผ่านเกณฑ์</span>
+<span class="ml-auto font-label-sm text-label-sm text-on-surface-variant">45 จาก 48 สวน</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 mt-space-xs overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 94.2%"></div>
+</div>
+</div>
+</div>
+<!-- Main Interactive Management Table & CRUD Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm flex flex-col overflow-hidden">
+<!-- Tabs Bar -->
+<div class="flex flex-wrap items-center justify-between px-space-lg pt-space-md bg-surface-container-low">
+<div class="flex items-center gap-space-xs overflow-x-auto">
+<button class="tab-button active px-space-md py-3 font-label-lg text-label-lg text-primary border-b-2 border-primary bg-surface-container-lowest rounded-t-lg transition-all" data-tab="all">
+            รายการสวนทั้งหมด (48)
+          </button>
+<button class="tab-button px-space-md py-3 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-t-lg transition-all" data-tab="stalls">
+            แผงรับซื้อ/ล้ง (34)
+          </button>
+<button class="tab-button px-space-md py-3 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-t-lg transition-all flex items-center gap-1.5" data-tab="pending">
+<span class="">รอการอนุมัติพิกัดใหม่</span>
+<span class="bg-secondary text-on-secondary px-1.5 py-0.2 rounded-full font-label-sm text-label-sm">4</span>
+</button>
+<button class="tab-button px-space-md py-3 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-t-lg transition-all" data-tab="pricing">
+            บันทึกราคาตลาดประจำวัน
+          </button>
+</div>
+<div class="py-2 text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">sync</span>
+<span class="">ซิงค์ดาวเทียม GIS ล่าสุด: 10:45 น. วันนี้</span>
+</div>
+</div>
+<!-- Filters & Controls Inside Table -->
+<div class="p-space-lg bg-surface-container-lowest flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-sm flex-1">
+<div class="relative flex-1 min-w-[260px] max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-lg">search</span>
+<input class="w-full pl-9 pr-space-md py-2 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="searchInput" placeholder="ค้นหาชื่อสวน, แผงล้ง, ทะเบียน GI หรือรหัสแปลง..." type="text">
+</div>
+<div class="flex items-center gap-2">
+<select class="px-space-md py-2 rounded-lg bg-surface text-on-surface font-label-sm text-label-sm outline-none cursor-pointer" id="districtFilter">
+<option value="">ทุกอำเภอ (จ.ยะลา)</option>
+<option value="เบตง">อ.เบตง (Betong)</option>
+<option value="ธารโต">อ.ธารโต (Than To)</option>
+<option value="บันนังสตา">อ.บันนังสตา (Bannang Sata)</option>
+<option value="เมืองยะลา">อ.เมืองยะลา (Mueang Yala)</option>
+<option value="ยะหา">อ.ยะหา (Yaha)</option>
+<option value="รามัน">อ.รามัน (Raman)</option>
+<option value="กรงปินัง">อ.กรงปินัง (Krong Pinang)</option>
+<option value="กาบัง">อ.กาบัง (Kabang)</option>
+</select>
+<select class="px-space-md py-2 rounded-lg bg-surface text-on-surface font-label-sm text-label-sm outline-none cursor-pointer" id="statusFilter">
+<option value="">ทุกสถานะกิจการ</option>
+<option value="เปิดบริการ">เปิดบริการปกติ</option>
+<option value="พักช่วง">พักช่วงนอกฤดู</option>
+<option value="รอตรวจ">รอตรวจพิกัด</option>
+</select>
+<select class="px-space-md py-2 rounded-lg bg-surface text-on-surface font-label-sm text-label-sm outline-none cursor-pointer" id="giFilter">
+<option value="">การรับรองทั้งหมด</option>
+<option value="GI สะเด็ดน้ำ">เฉพาะสะเด็ดน้ำ GI</option>
+<option value="GAP">เฉพาะ GAP</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="">แสดง <strong class="text-on-surface">6</strong> จาก 48 รายการ</span>
+<button class="p-2 rounded-lg bg-surface hover:bg-surface-container text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-3 px-space-md">ชื่อสถานที่ / ผู้ดูแล</th>
+<th class="py-3 px-space-md">ประเภท</th>
+<th class="py-3 px-space-md">อำเภอ / พิกัด GPS</th>
+<th class="py-3 px-space-md">มาตรฐานที่ได้รับ</th>
+<th class="py-3 px-space-md">เบอร์ติดต่อ</th>
+<th class="py-3 px-space-md">ราคากลางวันนี้</th>
+<th class="py-3 px-space-md">สถานะ</th>
+<th class="py-3 px-space-md text-center">จัดการ</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface" id="orchardTableBody">
+<!-- Row 1: สวนปู่สุข -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up of ripe Monthong and Musan King durians hanging on lush tree branches in a sunny highland orchard in Betong Yala Thailand with rich green foliage and mountain mist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhCOgBvpLojSj4q7Fi1E4RcDTgnUIJdL3RQD7_40R6xgcBSBbKvfrsT65XidhlUEyjDeut0ZzjGhAOg-SB3dT2WOuJg_2TTnSvdCwoBSq4QhdOYRRLt3Yd4o8Pwa0w2-5yNQqDMf8kE9y6pMAos02avNrAWMUdRJuC8kdTL76tFQb7Dd-e5Vu63P7c_IW1cfpp01FkFNweteSMm1N2rzx8n2GvzFURSvXzdrrOHqObvndhbCTMIdB1">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">สวนปู่สุข เบตงไฮแลนด์</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">รหัสแปลง: YLA-BTG-0012 · นายสุขวิทย์ แซ่หลี</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">tour</span> สวนท่องเที่ยวเชิงเกษตร
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">อ.เบตง</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">6.0384, 101.1821</span>
+<span class="font-label-sm text-label-sm text-secondary">ความสูง 620 ม. รทก.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">verified</span> GI สะเด็ดน้ำ
+                  </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    GAP รหัส 66
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">081-893-4421</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Line: @pusuk_betong</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-semibold">หมอนทอง 160 บ./กก.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">มูซานคิง 380 บ./กก.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed/70 text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> เปิดบริการปกติ
+                </span>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="แก้ไขข้อมูล">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" title="ดูบนแผนที่">
+<span class="material-symbols-outlined text-base">map</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface hover:bg-error-container text-on-surface-variant hover:text-error transition-colors" title="ลบข้อมูล">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: ล้งเจ๊นีเบตง -->
+<tr class="bg-surface-container-lowest/50 hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Busy commercial durian sorting packing warehouse stall in southern Thailand with crates of fresh durians weighing scales and workers sorting fruits" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8hA09-PPmx0RRYNHHFHJsE9UFfdjuef2Ze1m06nO9muLyTpNC9N5qLtEiPwne_CsgzHpQqOz_wdWnjZkRxMxjZu0tMPbkmYVAOa8AI3HWEAPfK2CwFu1X1yo6mrrMeZfWpLSorDDqn9gfMxpADzpeNeIHIj3ks9gYJX1e0rESiNzqlRrLNYgwyEM98DwzbIAs8eQh7uqzPa5xYfaNtx7C88YQO6ODgbOsian97OdRANm0ulUN1BP5">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">ล้งเจ๊นี เบตงฟรุตส์</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">รหัสล้ง: YLA-STALL-004 · คุณสุรีย์พร ตันติเจริญ</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">local_shipping</span> แผงรับซื้อส่งออก (ล้ง)
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">อ.เบตง</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">5.7741, 101.0722</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ติด ถ.สุขยางค์ ขาเข้า</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">verified</span> GMP Plus
+                  </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    ส่งออกจีน DOA
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">093-625-1188</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">จุดชั่ง 1-4 ว่าง</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary font-semibold">รับซื้อหมอนทอง 155 บ.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ชะนีตัด 110 บ./กก.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed/70 text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> เปิดรับซื้อปกติ
+                </span>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="แก้ไขข้อมูล">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" title="ดูบนแผนที่">
+<span class="material-symbols-outlined text-base">map</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface hover:bg-error-container text-on-surface-variant hover:text-error transition-colors" title="ลบข้อมูล">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: สวนลุงวิชัย ธารโต -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Highland durian farm in Than To Yala on hill slope with drainage terracing lush tropical rainforest background and clear blue morning sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY1TVkcSSyoGWyPi_Vr4WhuEBbWKKy1fwz2jCetLBkf58tS2cHdzh2x6gbuYlHze8l4Jl9cMo4LopxXJiLFTd8_yJ-eB8nUzqhVC7aUExwYxbiyfWvm2LuJW8NaFEtjRksfKnw_-Y78O35vN1Tb0W1jUm2XdPvcSaGzPctBfdUhlg5SzTui60DPX0ACEvqH5AokDN9o-gja7AJNDrEMZc3HFyQHgZtjEJYZh-R_KfDh_Q4AlmLq313">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">สวนลุงวิชัย สะเด็ดน้ำธารโต</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">รหัสแปลง: YLA-TT-0105 · นายวิชัย ศรีมงคล</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">agriculture</span> สวนผลผลิตจำหน่ายตรง
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">อ.ธารโต</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">6.1290, 101.1550</span>
+<span class="font-label-sm text-label-sm text-secondary">พื้นที่ลาดชันระบายน้ำ 100%</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">verified</span> GI สะเด็ดน้ำ
+                  </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    GAP ปลอดสารตกค้าง
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">087-291-7640</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">พร้อมบริการจัดส่ง EMS</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-semibold">ก้านยาว 220 บ./กก.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">หมอนทอง 150 บ./กก.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed/70 text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> เปิดบริการปกติ
+                </span>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="แก้ไขข้อมูล">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" title="ดูบนแผนที่">
+<span class="material-symbols-outlined text-base">map</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface hover:bg-error-container text-on-surface-variant hover:text-error transition-colors" title="ลบข้อมูล">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: สวนบังหมัด บันนังสตา -->
+<tr class="bg-surface-container-lowest/50 hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Traditional southern Thai durian farmer examining quality durian on tree in Bannang Sata orchard near river valley with golden morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6WcPW9BbP_FVuo0m-6jIl0984dEi9WCmObVnKi8FYtwJ1I2_w8Sq_OK1IP0UGWpzpZcFfyteCxllTept9WtCB0Jt-sLNXnTPzWUBmxpqGyAPHPGcsd30iPF0vbYAAoPzYbzT_uQmFFSHl_8P-NdvnjgQCL6L4bZYqigdbhCpHfCoieb0mTLUM5Q3ywA14hdjE9lUvc4q4Vzgp6czQhow4vLs0BO3TguM1JngKVtTKU3BTtVaWv6ZV">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">สวนบังหมัด บันนังสตาการ์เด้น</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">รหัสแปลง: YLA-BN-0045 · นายมูฮัมหมัด ดาโอ๊ะ</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">nature_people</span> สวนผลผลิต
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">อ.บันนังสตา</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">6.2625, 101.2589</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">โซนลุ่มน้ำปัตตานี</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    GAP รหัส 67
+                  </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed font-label-sm text-label-sm">
+                    ยื่นขอ GI แล้ว
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">089-598-1200</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ติดต่อช่วง 08:00-18:00</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-semibold">พวงมณี 140 บ./กก.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">หมอนทอง 148 บ./กก.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> พักช่วงนอกฤดู
+                </span>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="แก้ไขข้อมูล">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" title="ดูบนแผนที่">
+<span class="material-symbols-outlined text-base">map</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface hover:bg-error-container text-on-surface-variant hover:text-error transition-colors" title="ลบข้อมูล">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: สวนเขาน้ำค้าง เมืองยะลา (รอตรวจสอบ) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Terraced agricultural durian grove on mountain slope near Mueang Yala with mist in background and irrigation pipelines visible" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4QiOWLkC4e74a5fkHcldfX4XX5l4Qdl3EzgUR4xwBvEV2afnbRb5NX7D7gJuxYRiXCy7wA4xuNjPrhLz7R60eyiPOrvhf-fV6UYPmrnXw_D3N7iEJiEB59JgJx-fWDYysV83dAOqyeETWi1VyHeSf_MTFb5Odv2VqNhmsm6Z28Zf2_5BPcWl_ta_O55aBtMxxjzipuKPnQY0WLVty_yh9uilenoKQnJbpORkCCU65ZxyNIoDtzUE-">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">สวนเขาน้ำค้าง ลำพะยา</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">รหัสลงทะเบียนใหม่: REQ-2568-08 · นายอำนาจ แก้วมณี</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">tour</span> สวนท่องเที่ยว/คาเฟ่
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">อ.เมืองยะลา</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">6.5412, 101.2811</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ต.ลำพะยา</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">pending</span> รอประเมิน GI
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">062-114-9980</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">รอตรวจสอบเอกสาร</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-semibold">หมอนทอง 150 บ./กก.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">บุฟเฟต์ทุเรียนหัวละ 499 บ.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span> รอตรวจพิกัดแปลง
+                </span>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="px-2 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1" title="อนุมัติพิกัด">
+<span class="material-symbols-outlined text-sm">check_circle</span> ตรวจรับรอง
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 6: ล้งสหกรณ์การเกษตรธารโต จำกัด -->
+<tr class="bg-surface-container-lowest/50 hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Agricultural cooperative building and collection center for durian in Than To district Yala with official signage trucks and agricultural workers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGGLvPz35XqNuiYVPnWeeEpYx3no0AuZnnwW_NAZmflHHJxWX_BZfAnCwNGLjoVrRfATZIfFkV7L_zPEKE6NaBhl0PfA9fvtxXUNcOLZZvLPAGha7cxXb69qxRI6eizLCL7graJKx1P3gXc_GlWAuJLAe-2yFCEp_L_Usf6m_0u8nbHeEFLX8kHOoXBDTrG6Ao8cutlh6kLyMHoG8quRWSO745g7qWEK4h-FTYtdK5UwG5BXUmZcBZ">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">ล้งสหกรณ์การเกษตรธารโต จำกัด</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">รหัสล้ง: YLA-COOP-002 · สหกรณ์การเกษตรธารโต</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">storefront</span> ศูนย์รวบรวมสหกรณ์
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">อ.ธารโต</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">6.1344, 101.1680</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ศูนย์กลางอำเภอธารโต</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">verified</span> จุดรับซื้อ GI
+                  </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    GAP รวบรวม
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">073-299-102</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">โต๊ะรับซื้อเกษตรกร</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary font-semibold">หมอนทอง GI 158 บ.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">คละขนาด 130 บ./กก.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed/70 text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> เปิดรับซื้อปกติ
+                </span>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="แก้ไขข้อมูล">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" title="ดูบนแผนที่">
+<span class="material-symbols-outlined text-base">map</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface hover:bg-error-container text-on-surface-variant hover:text-error transition-colors" title="ลบข้อมูล">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">กำลังแสดงหน้า 1 จาก 8 หน้า (ทั้งหมด 48 แปลงที่ลงทะเบียน)</span>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm disabled:opacity-50" disabled="">ก่อนหน้า</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface hover:bg-surface-container text-on-surface font-label-sm text-label-sm">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface hover:bg-surface-container text-on-surface font-label-sm text-label-sm">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface hover:bg-surface-container text-on-surface font-label-sm text-label-sm">8</button>
+<button class="px-3 py-1 rounded-lg bg-surface hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm">ถัดไป</button>
+</div>
+</div>
+</div>
+<!-- Bottom Split Section: Mini Geographic Quick Map & Security Access Log Widget -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Mini Geographic Quick Map (Col 7) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">แผนที่กระจายตัวพิกัดสวนและล้ง จ.ยะลา</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">ตรวจสอบจุดที่มีการปักหมุดล่าสุด พร้อมตัวบ่งชี้ระดับความสูงเหนือระดับน้ำทะเล</p>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">satellite_alt</span> พิกัดเรียลไทม์
+          </span>
+</div>
+<div class="relative w-full h-72 rounded-xl overflow-hidden shadow-inner" data-location="Yala, Betong, Thailand">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Satellite top-down cartographic terrain view of Yala province Thailand mountainous terrain lush rainforest valleys and highland orchard contours" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADGg2on1_vkpdZ_NpbXUHt0udvfAAVDgYzVGJCeW_pkXwP-9p7Pleo8XRxabcRxLhvcU10jslmSc2u5d0YUWSLAi0Wm-DhcKDz73I8Ny65krUVJMSvah4kqdLUhErPh4smonOjiWG-DkviOUT_8P6t5WHkkOkkjFqPmIb5rG-QZu0fbFsEYzsIuiqE_3SO7aqSWNGf1wqBG6TXf-mcI9KIaOB5bGdTZs1rrnhOSNNx5WzqI50kHLbD')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent pointer-events-none"></div>
+<!-- Sample Interactive Overlay HUD inside map -->
+<div class="absolute top-3 right-3 flex flex-col gap-1.5 z-10">
+<button class="w-8 h-8 rounded-lg bg-surface text-on-surface shadow flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-base">zoom_in</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface text-on-surface shadow flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-base">zoom_out</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface text-on-surface shadow flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-base">layers</span>
+</button>
+</div>
+<!-- Pinned Orchard Indicators -->
+<div class="absolute top-1/4 left-1/3 p-1 rounded-full bg-secondary text-on-secondary shadow-lg flex items-center gap-1 text-xs px-2 cursor-pointer transform -translate-x-1/2 -translate-y-1/2 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm">nature</span>
+<span class="font-label-sm text-label-sm">สวนปู่สุข [เบตง]</span>
+</div>
+<div class="absolute top-1/2 left-2/3 p-1 rounded-full bg-primary text-on-primary shadow-lg flex items-center gap-1 text-xs px-2 cursor-pointer transform -translate-x-1/2 -translate-y-1/2 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="font-label-sm text-label-sm">สวนลุงวิชัย [ธารโต]</span>
+</div>
+<div class="absolute bottom-1/4 left-1/2 p-1 rounded-full bg-secondary-fixed text-on-secondary-fixed shadow-lg flex items-center gap-1 text-xs px-2 cursor-pointer transform -translate-x-1/2 -translate-y-1/2 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm">storefront</span>
+<span class="font-label-sm text-label-sm">ล้งเจ๊นี [สุขยางค์]</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary font-label-sm text-label-sm z-10 bg-primary/60 backdrop-blur-sm p-2 rounded-lg">
+<span class="">ศูนย์กลางการตรวจจับ: เขตสะเด็ดน้ำเบตง - ธารโต</span>
+<span class="text-secondary font-semibold">ความแม่นยำพิกัด GPS: ±1.2 เมตร</span>
+</div>
+</div>
+</div>
+<!-- System Security & Access Log Widget (Col 5) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-xl text-primary">security</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">บันทึกความปลอดภัย &amp; ผู้ดูแลระบบ</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">ปลอดภัย</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-space-md">ประวัติเซสชันและการแก้ไขข้อมูลล่าสุดโดยเจ้าหน้าที่เกษตรประจำศูนย์</p>
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">login</span>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">เข้าสู่ระบบสำเร็จ (Super Admin)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10 นาทีที่แล้ว</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">บัญชี: <code class="text-primary font-mono">yru136868@gmail.com</code></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">IP: 203.158.177.102 (เครือข่าย YRU-Gov Secure)</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">edit_location</span>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">อัปเดตพิกัดแปลง [YLA-TT-0105]</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">42 นาทีที่แล้ว</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ดำเนินการโดย: <strong class="text-on-surface">เจ้าหน้าที่ ID: 136868000</strong></span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">บันทึกความสูงระดับน้ำทะเล 480 ม. เรียบร้อย</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-lg mt-0.5">price_check</span>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">ปรับปรุงราคากลางสะเด็ดน้ำ</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">08:30 น.</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ระบบอัตโนมัติซิงค์จาก: สำนักงานพาณิชย์จังหวัดยะลา</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">สถานะ: ยืนยันราคาเกรดส่งออกจีน +5.00 บ.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">สิทธิ์เข้าถึง: สวพ.8 / เกษตรจังหวัดยะลา</span>
+<button class="text-primary hover:underline font-semibold flex items-center gap-0.5">
+<span class="">ดูประวัติทั้งหมด</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Modal Preview: + เพิ่มพิกัดใหม่บนแผนที่ จ.ยะลา -->
+<div class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden flex items-center justify-center p-space-md" id="addModal">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto flex flex-col">
+<div class="p-space-lg flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">add_location_alt</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">เพิ่มพิกัดสวนหรือแผงรับซื้อใหม่ (จ.ยะลา)</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">กรอกข้อมูลแปลงเพาะปลูกเพื่อลงทะเบียนฐานข้อมูลสารสนเทศเกษตร</p>
+</div>
+</div>
+<button class="p-2 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" id="btnCloseModal">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- Form Field: ชื่อสถานที่ & ผู้ดูแล -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">ชื่อสวน / แผงรับซื้อ *</label>
+<input class="px-space-md py-2.5 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20" placeholder="เช่น สวนลุงพัฒน์ สะเด็ดน้ำธารโต" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">ชื่อเจ้าของ / ผู้ติดต่อประสานงาน *</label>
+<input class="px-space-md py-2.5 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20" placeholder="เช่น นายพัฒนศักดิ์ บัวแก้ว" type="text">
+</div>
+</div>
+<!-- Form Field: ประเภท & อำเภอ -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">ประเภทสถานที่ *</label>
+<select class="px-space-md py-2.5 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm outline-none cursor-pointer">
+<option value="orchard_tour">สวนท่องเที่ยวเชิงเกษตร (Agritourism)</option>
+<option value="orchard_farm">สวนผลผลิตทุเรียน (Commercial Farm)</option>
+<option value="stall_export">แผงรับซื้อส่งออก / ล้ง (Export Stall)</option>
+<option value="stall_local">จุดรวบรวมกลุ่มวิสาหกิจชุมชน</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">อำเภอที่ตั้งแปลง *</label>
+<select class="px-space-md py-2.5 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm outline-none cursor-pointer">
+<option value="betong">อ.เบตง</option>
+<option value="thanto">อ.ธารโต</option>
+<option value="bannangsata">อ.บันนังสตา</option>
+<option value="mueang">อ.เมืองยะลา</option>
+<option value="yaha">อ.ยะหา</option>
+<option value="raman">อ.รามัน</option>
+<option value="krongpinang">อ.กรงปินัง</option>
+<option value="kabang">อ.กาบัง</option>
+</select>
+</div>
+</div>
+<!-- Form Field: GPS พิกัดละติจูด & ลองจิจูด -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between">
+<span class="">ละติจูด (Latitude) *</span>
+<button class="text-primary font-normal text-xs hover:underline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">my_location</span> หาพิกัดปัจจุบัน
+              </button>
+</label>
+<input class="px-space-md py-2.5 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm outline-none font-mono focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20" placeholder="เช่น 6.038421" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">ลองจิจูด (Longitude) *</label>
+<input class="px-space-md py-2.5 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm outline-none font-mono focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20" placeholder="เช่น 101.182145" type="text">
+</div>
+</div>
+<!-- Standards Checkboxes: GI & GAP -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">การรับรองและมาตรฐานคุณภาพ:</span>
+<div class="flex flex-wrap items-center gap-space-md">
+<label class="flex items-center gap-2 cursor-pointer font-label-sm text-label-sm text-on-surface">
+<input checked="" class="rounded text-primary focus:ring-primary" type="checkbox">
+<span class="inline-flex items-center gap-1 font-semibold text-primary">
+<span class="material-symbols-outlined text-sm">verified</span> ได้รับมาตรฐานสิ่งบ่งชี้ทางภูมิศาสตร์ (GI สะเด็ดน้ำยะลา)
+              </span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer font-label-sm text-label-sm text-on-surface">
+<input checked="" class="rounded text-primary focus:ring-primary" type="checkbox">
+<span class="">มาตรฐานการปฏิบัติทางการเกษตรที่ดี (GAP)</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer font-label-sm text-label-sm text-on-surface">
+<input class="rounded text-primary focus:ring-primary" type="checkbox">
+<span class="">ใบรับรองสารเคมีตกค้างเป็นศูนย์</span>
+</label>
+</div>
+</div>
+<!-- Contact & Prices -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">เบอร์โทรศัพท์ติดต่อ *</label>
+<input class="px-space-md py-2.5 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20" placeholder="เช่น 08X-XXX-XXXX" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">ราคาประเมินหมอนทอง (บ./กก.)</label>
+<input class="px-space-md py-2.5 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20" placeholder="150" type="number">
+</div>
+</div>
+<!-- Upload Image Placeholder Box -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">แนบรูปถ่ายสวน / ป้ายหน้าแปลง / ผลผลิต</label>
+<div class="p-space-md rounded-lg bg-surface flex flex-col items-center justify-center cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-3xl text-outline mb-1">add_photo_alternate</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">คลิกเพื่ออัปโหลดไฟล์ภาพแปลงหรือล้ง</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">รองรับไฟล์ JPG, PNG หรือ WebP ขนาดไม่เกิน 10MB</span>
+</div>
+</div>
+</div>
+<div class="p-space-lg bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-lg text-label-lg transition-colors" id="btnCancelModal">
+          ยกเลิก
+        </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm transition-all flex items-center gap-1.5" id="btnSubmitModal">
+<span class="material-symbols-outlined text-lg">check</span>
+<span class="">บันทึกพิกัดและส่งอนุมัติ</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Logic for Tab Switching, Modal Toggling, and Table Search Filters -->
+<script>
+    (function() {
+      // Modal Open/Close Toggles
+      const modal = document.getElementById('addModal');
+      const openBtn = document.getElementById('btnOpenModal');
+      const closeBtn = document.getElementById('btnCloseModal');
+      const cancelBtn = document.getElementById('btnCancelModal');
+      const submitBtn = document.getElementById('btnSubmitModal');
+
+      function openModal() {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      if (openBtn) openBtn.addEventListener('click', openModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+      if (submitBtn) {
+        submitBtn.addEventListener('click', function() {
+          alert('บันทึกพิกัดแปลงใหม่เข้าสู่ระบบเกษตรจังหวัดยะลาเรียบร้อยแล้ว!');
+          closeModal();
+        });
+      }
+
+      // Close modal on outside backdrop click
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Tab selection behavior
+      const tabs = document.querySelectorAll('.tab-button');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          tabs.forEach(t => {
+            t.classList.remove('text-primary', 'border-b-2', 'border-primary', 'bg-surface-container-lowest');
+            t.classList.add('text-on-surface-variant');
+          });
+          this.classList.remove('text-on-surface-variant');
+          this.classList.add('text-primary', 'border-b-2', 'border-primary', 'bg-surface-container-lowest');
+        });
+      });
+
+      // Simple Table Search Filter
+      const searchInput = document.getElementById('searchInput');
+      const districtFilter = document.getElementById('districtFilter');
+      const tableRows = document.querySelectorAll('#orchardTableBody tr');
+
+      function filterTable() {
+        const query = searchInput.value.toLowerCase().trim();
+        const selectedDistrict = districtFilter.value.trim();
+
+        tableRows.forEach(row => {
+          const rowText = row.innerText.toLowerCase();
+          const matchQuery = !query || rowText.includes(query);
+          const matchDistrict = !selectedDistrict || rowText.includes(selectedDistrict.toLowerCase());
+
+          if (matchQuery && matchDistrict) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      }
+
+      if (searchInput) searchInput.addEventListener('input', filterTable);
+      if (districtFilter) districtFilter.addEventListener('change', filterTable);
+    })();
+  </script>
+</div></main></div>
+
+</body></html>
